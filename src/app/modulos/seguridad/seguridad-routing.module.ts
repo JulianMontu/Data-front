@@ -5,6 +5,7 @@ import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
 import { LoginComponent } from './login/login.component';
 import { RecuperarClaveComponent } from './recuperar-clave/recuperar-clave.component';
 
+
 const routes: Routes = [
   {
     path: 'login',
