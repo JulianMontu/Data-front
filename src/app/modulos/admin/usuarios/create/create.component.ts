@@ -16,31 +16,31 @@ export class CreateComponent implements OnInit {
   constructor(private fb: FormBuilder,
     private usuarioService: UsuarioService,
     private router: Router) { }
-    fgValidacion = this.fb.group({
-      nombre: ['', [Validators.required]],
-      apellidos: ['', [Validators.required]],
-      telefono: ['', [Validators.required, Validators.minLength(6)]],
-      correo: ['', [Validators.required, Validators.email]],
-    });
-  
+  fgValidacion = this.fb.group({
+    nombre: ['', [Validators.required]],
+    apellidos: ['', [Validators.required]],
+    telefono: ['', [Validators.required, Validators.minLength(6)]],
+    correo: ['', [Validators.required, Validators.email]],
+  });
+
 
   ngOnInit(): void {
   }
-  store(){
+  store() {
     let usuario = new UsuarioModelo();
     usuario.nombre = this.fgValidacion.controls["nombre"].value;
     usuario.apellidos = this.fgValidacion.controls["apellidos"].value;
     usuario.correo = this.fgValidacion.controls["correo"].value;
     usuario.telefono = this.fgValidacion.controls["telefono"].value;
- 
-    this.usuarioService.store(usuario).subscribe((data: UsuarioModelo)=> {
+
+    this.usuarioService.store(usuario).subscribe((data: UsuarioModelo) => {
       Swal.fire('Creado correctamente!', '', 'success')
       this.router.navigate(['/admin/get']);
     },
-    (error: any) => {
-      console.log(error)
-      alert("Error en el envio");
-    })
+      (error: any) => {
+        console.log(error)
+        alert("Error en el envio");
+      })
   }
 
 
