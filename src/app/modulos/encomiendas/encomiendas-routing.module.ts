@@ -8,9 +8,11 @@ import { SessionGuard } from 'src/app/guards/session.guard';
 const routes: Routes = [{
   path: 'create',
   component: CreateComponent,
+  canActivate: [SessionGuard]
 },{
   path: 'edit/:id',
   component: EditComponent,
+  canActivate: [SessionGuard]
 },{
   path: 'get',
   component: GetComponent,

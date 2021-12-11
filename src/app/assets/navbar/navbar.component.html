@@ -11,6 +11,7 @@
         <a routerLink="/encomiendas/get">Encomiendas</a>
       </li>
       <li *ngIf="activeSession"><a routerLink="/clientes/get">Clientes</a></li>
+      <li *ngIf="activeSession"><a routerLink="/servicios/get">Servicio</a></li>
       <!-- Sesion -->
       <li *ngIf="!activeSession"><a routerLink="/seguridad/login">Login</a></li>
       <li *ngIf="activeSession">
