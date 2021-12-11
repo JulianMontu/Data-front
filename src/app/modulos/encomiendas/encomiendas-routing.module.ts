@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { GetComponent } from './get/get.component';
+import { SessionGuard } from 'src/app/guards/session.guard';
 
 const routes: Routes = [{
   path: 'create',
@@ -13,6 +14,7 @@ const routes: Routes = [{
 },{
   path: 'get',
   component: GetComponent,
+  canActivate: [SessionGuard]
 },{
   path: '',
   redirectTo: 'get',
