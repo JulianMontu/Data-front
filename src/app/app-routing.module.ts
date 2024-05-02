@@ -16,10 +16,12 @@ const routes: Routes = [
   {
     path: 'error',
     component: ErrorComponent,
-  },{
-    path: 'seguridad',
-    loadChildren: () => import('./modulos/seguridad/seguridad.module').then(m => m.SeguridadModule)
-  },{
+  }
+  // ,{
+  //   path: 'seguridad',
+  //   loadChildren: () => import('./modulos/seguridad/seguridad.module').then(m => m.SeguridadModule)
+  // }
+  ,{
     path: 'admin',
     loadChildren: () => import('./modulos/admin/admin.module').then(m => m.AdminModule)
   },{

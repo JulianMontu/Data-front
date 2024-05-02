@@ -8,15 +8,15 @@ import { SessionGuard } from 'src/app/guards/session.guard';
 const routes: Routes = [
   {path: 'create',
 component:  CreateComponent,
-canActivate: [SessionGuard]
+//canActivate: [SessionGuard]
 },{
 path: 'edit/:id',
 component: EditComponent,
-canActivate: [SessionGuard]
+//canActivate: [SessionGuard]
 },{
 path: 'get',
 component: GetComponent,
-canActivate: [SessionGuard]
+//canActivate: [SessionGuard]
 },{
 path: '',
 redirectTo: 'get',

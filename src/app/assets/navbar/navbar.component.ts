@@ -16,10 +16,10 @@ export class NavbarComponent implements OnInit {
 subs: Subscription = new Subscription();
 
   ngOnInit(): void {
-    this.subs = this.seguridadService.datosUsuarioSesion().subscribe((data: UsuarioModelo) => {
-      console.log(data)
-        this.activeSession = data.isLoggedIn;
-    })
+    // this.subs = this.seguridadService.datosUsuarioSesion().subscribe((data: UsuarioModelo) => {
+    //   console.log(data)
+    //     this.activeSession = data.isLoggedIn;
+    // })
 
   }
 

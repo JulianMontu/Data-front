@@ -13,7 +13,7 @@ export class EncomiendaService {
     private seguridadService: SeguridadService) {
     this.token = this.seguridadService.getToken();
   }
-  url = "https://apiloopbackgrupo27jmb.herokuapp.com/"
+  url = "http://localhost:3000/"
   token: string = ''
   store(encomienda: EncomiendaModelo): Observable<EncomiendaModelo> {
     return this.http.post<EncomiendaModelo>(`${this.url}/encomiendas`, {

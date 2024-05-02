@@ -13,7 +13,7 @@ export class ServicioService {
     private seguridadService: SeguridadService) {
     this.token = this.seguridadService.getToken();
   }
-  url = "https://apiloopbackgrupo27jmb.herokuapp.com/"
+  url = "http://localhost:3000/"
   token: string = ''
   store(servicio: ServicioModelo): Observable<ServicioModelo> {
     return this.http.post<ServicioModelo>(`${this.url}/servicios`, {
