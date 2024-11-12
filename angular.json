@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "amazon:build:production"
+              "buildTarget": "amazon:build:production"
             },
             "development": {
-              "browserTarget": "amazon:build:development"
+              "buildTarget": "amazon:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "amazon:build"
+            "buildTarget": "amazon:build"
           }
         },
         "test": {
