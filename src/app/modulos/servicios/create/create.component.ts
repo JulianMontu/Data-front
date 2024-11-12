@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ClienteModelo } from 'src/app/modelos/cliente.model';
 import { EncomiendaModelo } from 'src/app/modelos/encomienda.model';
@@ -16,7 +16,7 @@ import Swal from 'sweetalert2'
 })
 export class CreateComponent implements OnInit {
 
-  constructor(private fb: FormBuilder,
+  constructor(private fb: UntypedFormBuilder,
     private servicioService: ServicioService, private clienteService: ClienteService, private encomiendaService: EncomiendaService,
     private router: Router) { }
   fgValidacion = this.fb.group({

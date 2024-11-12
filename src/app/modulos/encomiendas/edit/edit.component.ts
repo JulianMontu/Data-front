@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EncomiendaModelo } from 'src/app/modelos/encomienda.model';
 import { EncomiendaService } from 'src/app/servicios/encomienda.service';
@@ -14,7 +14,7 @@ import Swal from 'sweetalert2'
 export class EditComponent implements OnInit {
 
 
-  constructor(private fb: FormBuilder,
+  constructor(private fb: UntypedFormBuilder,
     private encomiendaService: EncomiendaService,
     private router: Router,
     private route: ActivatedRoute

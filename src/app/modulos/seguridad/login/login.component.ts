@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormBuilder, Validators } from '@angular/forms';
 import * as cryptoJS from 'crypto-js';
 import { SeguridadService } from 'src/app/servicios/seguridad.service';
 import { Router } from '@angular/router';
@@ -13,7 +13,7 @@ import Swal from 'sweetalert2'
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private seguridadService: SeguridadService,
+  constructor(private fb: UntypedFormBuilder, private seguridadService: SeguridadService,
     private router: Router
   ) { }
   fgValidacion = this.fb.group({
