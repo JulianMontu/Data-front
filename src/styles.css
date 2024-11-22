@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    font-family: "Poppins", sans-serif !important;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-variation-settings: normal;
+
+    /* Sobrescribe la variable global de fuente */
+    --font-family: "Poppins", sans-serif !important;
+
+    /* Resto del tema */
+    --surface-a: #ffffff;
+    --surface-b: #f9fafb;
+    --surface-c: #f3f4f6;
+    --surface-d: #e5e7eb;
+    --surface-e: #ffffff;
+    --surface-f: #ffffff;
+    --text-color: #4b5563;
+    --text-color-secondary: #6b7280;
+    --primary-color: #14b8a6;
+    --primary-color-text: #ffffff;
+    --surface-0: #ffffff;
+    --surface-50: #f9fafb;
+    --surface-100: #f3f4f6;
+    --surface-200: #e5e7eb;
+    --surface-300: #d1d5db;
+    --surface-400: #9ca3af;
+    --surface-500: #6b7280;
+    --surface-600: #4b5563;
+    --surface-700: #374151;
+    --surface-800: #1f2937;
+    --surface-900: #111827;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    --content-padding: 1.25rem;
+    --inline-spacing: 0.5rem;
+    --border-radius: 6px;
+    --surface-ground: #f9fafb;
+    --surface-section: #ffffff;
+    --surface-card: #ffffff;
+    --surface-overlay: #ffffff;
+    --surface-border: #dfe7ef;
+    --surface-hover: #f6f9fc;
+    --focus-ring: 0 0 0 0.2rem #99f6e4;
+    --maskbg: rgba(0, 0, 0, 0.4);
+    --highlight-bg: #f0fdfa;
+    --highlight-text-color: #0f766e;
+    color-scheme: light;
+}
+
+/* Aplicación global de la fuente */
+body {
+    font-family: "Poppins", sans-serif !important;
+}

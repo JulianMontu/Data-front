@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="container-content">
+        <div class="section-text">
+            <h2>Bienvenido a la aplicacion</h2>
+        </div>
+        <div class="section-cards">
+            <div class="card flex justify-content-center" *ngFor="let item of items">
+                <p-card header="{{item.title}}" subheader="{{item.subtitle}}">
+                    <ng-template pTemplate="header">
+                        <img alt="Card" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+                    </ng-template>
+                    <p>
+                        {{item.description}}
+                    </p>
+                </p-card>
+            </div>
+        </div>
+    </div>
+</div>
