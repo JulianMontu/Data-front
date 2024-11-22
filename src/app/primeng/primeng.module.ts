@@ -18,7 +18,7 @@ import { MenuModule } from 'primeng/menu';
 import { InputIconModule } from 'primeng/inputicon';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputNumberModule } from 'primeng/inputnumber';
-
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 @NgModule({
   exports: [
@@ -40,6 +40,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
     TabMenuModule,
     SidebarModule,
     MenuModule,
+    ProgressSpinnerModule,
   ]
 })
 export class PrimengModule { }

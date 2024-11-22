@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { IndexPageComponent } from './pages/index-page/index-page.component';
 import { PrimengModule } from './primeng/primeng.module';
+import { SpinnerComponent } from './shared/components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { PrimengModule } from './primeng/primeng.module';
     FooterComponent,
     IndexComponent,
     ErrorComponent,
-    IndexPageComponent
+    IndexPageComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,11 +5,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { PrimengModule } from '../primeng/primeng.module';
 import { HeaderComponent } from './components/header/header.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 
 
 @NgModule({
-  declarations: [LayoutComponent,HeaderComponent],
+  declarations: [LayoutComponent,HeaderComponent,SpinnerComponent],
   imports: [
     CommonModule,
     BrowserModule,
