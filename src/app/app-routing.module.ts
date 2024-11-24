@@ -13,7 +13,7 @@ const routes: Routes = [
       { path: 'seguridad', loadChildren: () => import('./modulos/seguridad/seguridad.module').then(m => m.SeguridadModule) },
       { path: 'admin', loadChildren: () => import('./modulos/admin/admin.module').then(m => m.AdminModule) },
       { path: 'encomiendas', loadChildren: () => import('./modulos/encomiendas/encomiendas.module').then(m => m.EncomiendasModule) },
-      { path: 'clientes', loadChildren: () => import('./modulos/clientes/clientes.module').then(m => m.ClientesModule) },
+      { path: 'clientes', loadChildren: () => import('./pages/clients/clients.module').then(m => m.ClientsModule) },
       { path: 'servicios', loadChildren: () => import('./modulos/servicios/servicios.module').then(m => m.ServiciosModule) },
       { path: '', pathMatch: 'full', redirectTo: 'index' } // Redirección a la página de inicio
     ]

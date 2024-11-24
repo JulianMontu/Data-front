@@ -15,11 +15,13 @@ export class HeaderComponent {
         this.items = [
             {
                 label: 'Home',
-                icon: 'pi pi-home'
+                icon: 'pi pi-home',
+                url: 'index',
             },
             {
-                label: 'Features',
-                icon: 'pi pi-star'
+                label: 'Clientes',
+                icon: 'pi pi-star',
+                url: 'clientes',
             },
             {
                 label: 'Projects',
