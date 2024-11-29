@@ -14,7 +14,7 @@ export class ClienteService {
     private seguridadService: SeguridadService) {
     this.token = this.seguridadService.getToken();
   }
-  url = "http://localhost:3000/"
+  url = "https://fake-api-production-sena.up.railway.app"
   token: string = ''
   store(cliente: ClienteModelo): Observable<ClienteModelo> {
     return this.http.post<ClienteModelo>(`${this.url}/clientes`, {

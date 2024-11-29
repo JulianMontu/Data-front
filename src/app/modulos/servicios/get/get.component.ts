@@ -28,6 +28,8 @@ export class GetComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         this.servicioService.delete(id).subscribe((data: any) => {
+          debugger
+          console.log(data)
           Swal.fire('¡Eliminado correctamente!', '', 'success')
           this.getAll();
         })

@@ -13,7 +13,7 @@ export class ServicioService {
     private seguridadService: SeguridadService) {
     this.token = this.seguridadService.getToken();
   }
-  url = "http://localhost:3000/"
+  url = "https://fake-api-production-sena.up.railway.app"
   token: string = ''
   store(servicio: ServicioModelo): Observable<ServicioModelo> {
     return this.http.post<ServicioModelo>(`${this.url}/servicios`, {
@@ -51,6 +51,7 @@ export class ServicioService {
     });
   }
   delete(id: string): Observable<ServicioModelo[]> {
+    debugger
     return this.http.delete<ServicioModelo[]>(`${this.url}/servicios/${id}`, {
       headers: new HttpHeaders({
         "Authorization": `Bearer ${this.token}`
