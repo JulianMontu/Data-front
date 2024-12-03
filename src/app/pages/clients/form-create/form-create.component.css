@@ -1,0 +1,40 @@
+/* Establecemos un grid de tres columnas en pantallas grandes */
+
+.content-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 10px;
+}
+
+.button-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    button{
+        width: 100%;
+        max-width: 323px;
+    }
+}
+.form-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    gap: 1rem; /* Espaciado entre los elementos */
+  }
+  
+  /* Cuando la pantalla sea más pequeña (mobile), cambiar a una columna */
+  @media (max-width: 768px) {
+    .form-grid {
+      grid-template-columns: 1fr; /* Una columna */
+    }
+  }
+  
+  /* Puedes ajustar el tamaño de los campos para que ocupen el 100% del espacio en móviles */
+  .p-field input {
+    width: 100%;
+  }
+  

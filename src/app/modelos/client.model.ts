@@ -1,12 +1,13 @@
 export class Client {
     id?: string;
-    nationalId?: string; // cedula
-    firstName?: string;  // nombre
-    lastName?: string;   // apellido
-    country?: string;    // pais
-    city?: string;       // ciudad
-    state?: string;      // departamento
-    address?: string;    // direccion
-    phone?: string;      // telefono
-    email?: string;      // email
-}
+    nationalId?: string | null;  // Permitir null
+    firstName?: string | null;
+    lastName?: string | null;
+    country?: string | null;
+    city?: string | null;
+    state?: string | null;
+    address?: string | null;
+    phone?: string | null;
+    email?: string | null;
+  }
+  

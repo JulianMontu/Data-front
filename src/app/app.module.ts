@@ -12,7 +12,7 @@ import { SharedModule } from './shared/shared.module';
 import { IndexPageComponent } from './pages/index-page/index-page.component';
 import { PrimengModule } from './primeng/primeng.module';
 import { SpinnerComponent } from './shared/components/spinner/spinner.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';  // <-- Asegúrate de importar esto
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +23,7 @@ import { SpinnerComponent } from './shared/components/spinner/spinner.component'
     IndexPageComponent,
   ],
   imports: [
+    BrowserAnimationsModule,  
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

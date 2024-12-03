@@ -4,6 +4,8 @@ import { ClienteModelo } from 'src/app/modelos/cliente.model';
 import { SpinnerService } from 'src/app/shared/components/spinner/services/spinner-service.service';
 import { ClientService } from '../services/client-service.service';
 import { Client } from 'src/app/modelos/client.model';
+import { Router } from '@angular/router';
+import { TransitionsService } from 'src/app/services/transitions.service';
 
 @Component({
   selector: 'app-list-clients',
@@ -17,7 +19,9 @@ export class ListClientsComponent {
 
   constructor(private spinnerService: SpinnerService,
     private messageService: MessageService,
-  private clientService: ClientService){
+  private clientService: ClientService,
+private router: Router,
+private transitionService: TransitionsService) {
 
   }
 
@@ -41,6 +45,10 @@ export class ListClientsComponent {
 
   selectProduct(cliente: ClienteModelo) {
       //this.messageService.add({ severity: 'info', summary: 'Product Selected', detail: product.name });
+  }
+
+  createUser(){
+    this.transitionService.navigateForward('clientes/users');
   }
 
 }

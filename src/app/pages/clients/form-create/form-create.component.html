@@ -1,1 +1,55 @@
-<p>form-create works!</p>
+<p-toast 
+    [showTransformOptions]="'translateY(100%)'" 
+    [showTransitionOptions]="'1000ms'" 
+    [hideTransitionOptions]="'1000ms'" 
+    [showTransformOptions]="'translateX(100%)'" />
+    
+<div class="card">
+    <div class="content-form">
+      <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+        <div class="p-fluid form-grid">
+          <div class="p-field">
+            <input id="nationalId" type="text" pInputText formControlName="nationalId" placeholder="Cédula" />
+          </div>
+  
+          <div class="p-field">
+            <input id="firstName" type="text" pInputText formControlName="firstName" placeholder="Nombre" />
+          </div>
+  
+          <div class="p-field">
+            <input id="lastName" type="text" pInputText formControlName="lastName" placeholder="Apellido" />
+          </div>
+  
+          <div class="p-field">
+            <input id="country" type="text" pInputText formControlName="country" placeholder="País" />
+          </div>
+  
+          <div class="p-field">
+            <input id="city" type="text" pInputText formControlName="city" placeholder="Ciudad" />
+          </div>
+  
+          <div class="p-field">
+            <input id="state" type="text" pInputText formControlName="state" placeholder="Departamento" />
+          </div>
+  
+          <div class="p-field">
+            <input id="address" type="text" pInputText formControlName="address" placeholder="Dirección" />
+          </div>
+  
+          <div class="p-field">
+            <input id="phone" type="text" pInputText formControlName="phone" placeholder="Teléfono" />
+          </div>
+  
+          <div class="p-field">
+            <input id="email" type="email" pInputText formControlName="email" placeholder="Correo electrónico" />
+          </div>
+        </div>
+
+      </form>
+
+      <div class="button-section">
+      <button pButton type="submit" label="Guardar" [disabled]="formGroup.invalid" (click)="onSubmit()"></button>
+    </div>
+    </div>
+  </div>
+  

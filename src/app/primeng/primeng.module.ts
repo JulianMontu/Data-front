@@ -19,28 +19,30 @@ import { InputIconModule } from 'primeng/inputicon';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { RippleModule } from 'primeng/ripple';
 
 @NgModule({
   exports: [
-    ConfirmDialogModule,
-    ToastModule,
-    MenubarModule,
-    PanelModule,
-    CardModule,
-    TableModule,
-    DropdownModule,
     ButtonModule,
-    InputTextModule,
-    InputNumberModule,
-    InputGroupModule, 
-    InputGroupAddonModule,
-    InputIconModule, 
-    IconFieldModule,
+    CardModule,
+    ConfirmDialogModule,
+    DropdownModule,
     FloatLabelModule,
-    TabMenuModule,
-    SidebarModule,
+    IconFieldModule,
+    InputGroupAddonModule,
+    InputGroupModule, 
+    InputIconModule, 
+    InputNumberModule,
+    InputTextModule,
+    MenubarModule,
     MenuModule,
+    PanelModule,
     ProgressSpinnerModule,
+    RippleModule,
+    SidebarModule,
+    TableModule,
+    TabMenuModule,
+    ToastModule,
   ]
 })
 export class PrimengModule { }

@@ -1,4 +1,10 @@
 <div class="card">
+    <div class="content-title">
+        <h3>Listado de usuarios</h3>
+        <p-button label="Crear usuario" (click)="createUser()"/>
+    </div>
+    
+
     <p-toast />
     <p-table [value]="clients" [tableStyle]="{ 'min-width': '50rem' }">
         <ng-template pTemplate="header">

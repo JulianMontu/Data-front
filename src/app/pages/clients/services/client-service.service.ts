@@ -20,4 +20,11 @@ export class ClientService {
   getAll(): Observable<Client[]> {
     return this.http.get<Client[]>(`${environment.url}${APIENDPOINT.clients.getAllClients}`)
   }
+
+  create(client: Client): Observable<any> {
+    const url = `${environment.url}${APIENDPOINT.clients.createClient}`;
+    console.log('Enviando datos a:', url, client); // Verifica la URL y los datos enviados
+    return this.http.post(url, client);
+  }
+  
 }

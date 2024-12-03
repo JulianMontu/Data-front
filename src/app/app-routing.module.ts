@@ -3,11 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { ErrorComponent } from './assets/error/error.component';
 import { IndexComponent } from './assets/index/index.component';
 import { LayoutComponent } from './shared/components/layout/layout.component';
+import { CommonModule } from '@angular/common';
  
 const routes: Routes = [
   {
     path: '', // Ruta principal
-    component: LayoutComponent, // Componente contenedor con el header
+    component: LayoutComponent, data: { animation: 'isLeft' }, // Componente contenedor con el header
     children: [
       { path: 'index', loadChildren: () =>  import('./pages/index-page/index-page.module').then(m => m.IndexPageModule) },
       { path: 'seguridad', loadChildren: () => import('./modulos/seguridad/seguridad.module').then(m => m.SeguridadModule) },
@@ -24,7 +25,7 @@ const routes: Routes = [
 ];
  
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), CommonModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
