@@ -43,8 +43,9 @@ private transitionService: TransitionsService) {
   }
 
 
-  selectProduct(cliente: ClienteModelo) {
-      //this.messageService.add({ severity: 'info', summary: 'Product Selected', detail: product.name });
+  selectProduct(id:string) {
+    //this.router.navigate(['/clientes/users'], { queryParams: { id: id } });
+    this.transitionService.navigateForwardQueryParam('clientes/users', { id: id });
   }
 
   createUser(){

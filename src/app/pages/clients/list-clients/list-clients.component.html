@@ -18,20 +18,20 @@
                 <th style="width: 5rem"></th>
             </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-clients>
+        <ng-template pTemplate="body" let-client>
             <tr>
-                <td>{{ clients.firstName }}</td>
-                <td>{{ clients.nationalId }}</td>
-                <td>{{ clients.email }}</td>
-                <td>{{ clients.country }}</td>
-                <td>{{ clients.city }}</td>
+                <td>{{ client.firstName }}</td>
+                <td>{{ client.nationalId }}</td>
+                <td>{{ client.email }}</td>
+                <td>{{ client.country }}</td>
+                <td>{{ client.city }}</td>
                 <td>
                     <button 
                         type="button" 
                         pButton 
                         pRipple 
                         icon="pi pi-plus" 
-                        (click)="selectProduct(clients)">
+                        (click)="selectProduct(client._id)">
                     </button>
                 </td>
             </tr>

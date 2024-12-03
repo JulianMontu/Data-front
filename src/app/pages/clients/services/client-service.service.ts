@@ -11,6 +11,8 @@ import { environment } from 'src/environments/environment';
 })
 export class ClientService {
 
+  idClient: string = '';
+
   headers = new HttpHeaders({
     "Authorization": `Bearer `
   });
@@ -20,6 +22,13 @@ export class ClientService {
   getAll(): Observable<Client[]> {
     return this.http.get<Client[]>(`${environment.url}${APIENDPOINT.clients.getAllClients}`)
   }
+
+  getClientById(id: string): Observable<Client> {
+    // Realiza la solicitud HTTP al endpoint del backend para obtener un cliente por su ID
+    return this.http.get<Client>(`${environment.url}${APIENDPOINT.clients.getClientById}/${id}`);
+  }
+  
+  
 
   create(client: Client): Observable<any> {
     const url = `${environment.url}${APIENDPOINT.clients.createClient}`;

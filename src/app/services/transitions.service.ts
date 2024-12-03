@@ -7,7 +7,7 @@ import { StickyButtonService } from './sticky-button.service';
 })
 export class TransitionsService {
 
-  transitions: any = ["isRight", "isLeft"];
+  transitions: any = ["isRight", "isLeft","enter"];
   selectedTransition: any;
   redirectCompleted: boolean = false;
 
@@ -62,6 +62,17 @@ export class TransitionsService {
     this.findRoute(path, this.transitions[1]);
     this.navigate(path);
   }
+
+  navigateForwardQueryParam(url: string, queryParams: any = {}) {
+    // Establece la animación antes de navegar
+    this.findRoute(url, this.transitions[2]);  // Aquí eliges la transición deseada
+    
+    // Forzar la recarga de la ruta para activar la animación
+    this.router.navigateByUrl('/empty', { skipLocationChange: true }).then(() => {
+      this.router.navigate([url], { queryParams: queryParams });
+    });
+  }
+  
 
   // Método de navegación general
   navigate(path: string) {

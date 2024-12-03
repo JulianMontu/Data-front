@@ -1,5 +1,5 @@
 export class Client {
-    id?: string;
+    _id?: string;
     nationalId?: string | null;  // Permitir null
     firstName?: string | null;
     lastName?: string | null;

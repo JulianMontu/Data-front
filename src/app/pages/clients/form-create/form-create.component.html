@@ -3,7 +3,7 @@
     [showTransitionOptions]="'1000ms'" 
     [hideTransitionOptions]="'1000ms'" 
     [showTransformOptions]="'translateX(100%)'" />
-    
+
 <div class="card">
     <div class="content-form">
       <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
@@ -48,7 +48,7 @@
       </form>
 
       <div class="button-section">
-      <button pButton type="submit" label="Guardar" [disabled]="formGroup.invalid" (click)="onSubmit()"></button>
+      <button pButton type="submit" [label]="titleTextButton" [disabled]="formGroup.invalid" (click)="onSubmit()"></button>
     </div>
     </div>
   </div>
